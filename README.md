@@ -14,7 +14,7 @@ Terraform will output a GitHub actions workflow file named 'nginxGithubActions.y
 
 ## NGINX Configurations
 
-The configuration directory has the following file and folder structure. Refer to the demo repo [CI/CD Pipeline NGINX Configurations](https://github.com/f5devcentral/f5-digital-customer-engagement-center/tree/main/solutions/delivery/application_delivery_controller/nginx/nginx-for-azure#cicd-pipeline-nginx-configurations) to learn how these files are used.
+The configuration directory has the following file and folder structure. Refer to the demo repo README section [CI/CD Pipeline NGINX Configurations](https://github.com/f5devcentral/f5-digital-customer-engagement-center/tree/main/solutions/delivery/application_delivery_controller/nginx/nginx-for-azure#cicd-pipeline-nginx-configurations) to learn how these files are used.
 
 
 ```
