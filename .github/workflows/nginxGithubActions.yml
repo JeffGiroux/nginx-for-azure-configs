@@ -9,8 +9,8 @@ on:
       - configs/**
 
 env:
-  RESOURCE_GROUP_NAME: myRg123
-  NGINX_DEPLOYMENT_NAME: myNginx123
+  RESOURCE_GROUP_NAME: girouxnginx-rg-shared-5e37
+  NGINX_DEPLOYMENT_NAME: girouxnginx-nginx-5e37
   NGINX_TRANSFORMED_CONFIG_DIR_PATH: /etc/nginx/
   NGINX_CONFIG_DIRECTORY_PATH: configs/
   NGINX_ROOT_CONFIG_FILE: nginx.conf
