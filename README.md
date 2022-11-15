@@ -47,7 +47,7 @@ You will need to store and modify NGINX configurations in a GitHub repo. The eas
 
 The GitHub Actions workflow uses the Azure login action and requires OpenID Connect to establish trust with Azure. See [GitHub Actions to Connect to Azure](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows) for details. Here's a quick walk-through.
 
-1. [Create an Azure Active Directory application and service principal with "Contributor" access](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#create-an-azure-active-directory-application-and-service-principal) to your Azure subscription
+1. [Create an Azure Active Directory application and service principal](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#create-an-azure-active-directory-application-and-service-principal) with "Contributor" access to your Azure subscription
     - Copy the values for clientId, subscriptionId, and tenantId
 2. [Add federated credentials](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#add-federated-credentials) for the NGINX configuration repo
     - Your GitHub organization/username (ex. MyOrg123XYZ)
@@ -74,7 +74,8 @@ The scale in/out events of autoscale groups will trigger a PowerShell script to 
 4. Generate token and copy the value
 5. In your Azure subscription, [create an Azure Key Vault and secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli)
     - secret value = GitHub access token (copied from step 4)
-6. Copy the name of the Key Vault, Key Vault secret, and save for later
+6. Copy the Key Vault name and Key Vault secret name
+    - Save for later
 
 ## Day 1 Infrastructure
 
