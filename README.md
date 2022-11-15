@@ -34,7 +34,7 @@ This repo contains NGINX configuration files for a sample application. The sampl
 
 ### Requirement #1 - GitHub Repository to Store NGINX Configurations
 
-You will need to store and modify NGINX configurations in a GitHub repo. The easiest way is to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo.
+You will store and modify NGINX configurations in a GitHub repo. The easiest way is to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo.
 
 1. Select the **Fork** button in the upper-right
 2. Choose an Owner and Repository Name for the new repo
@@ -61,7 +61,7 @@ The GitHub Actions workflow uses the Azure login action and requires OpenID Conn
 
 ### Requirement #3 - Azure PowerShell Access to Modify GitHub Repository
 
-The scale in/out events of autoscale groups will trigger a PowerShell script to run. PowerShell retrieves the server IP addresses and updates the NGINX configuration files. Git actions include clone, pull, add, and commit. Secure communication is accomplished with a GitHub access token retrieved from an Azure Key Vault secret. See [GitHub Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and [Azure Key Vault Secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli) for details. Here's a quick walk-through.
+The Azure Function runtime uses PowerShell and updates the NGINX configuration files in the repo. Git actions include clone, pull, add, and commit. Secure communication is accomplished with a GitHub access token retrieved from an Azure Key Vault secret. See [GitHub Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and [Azure Key Vault Secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli) for details. Here's a quick walk-through.
 
 1. In your GitHub profile settings, create a [fine-grained GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token)
     - Name of token, expiration, Resource Owner
@@ -74,7 +74,8 @@ The scale in/out events of autoscale groups will trigger a PowerShell script to 
 4. Generate token and copy the value
 5. In your Azure subscription, [create an Azure Key Vault and secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli)
     - secret value = GitHub access token (copied from step 4)
-6. Copy the Key Vault name and Key Vault secret name
+6. Copy the names of the following Azure items:
+    - Key Vault name and Key Vault secret name
     - Save for later
 
 ## Day 1 Infrastructure
