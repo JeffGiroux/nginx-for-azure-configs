@@ -57,11 +57,12 @@ The GitHub Actions workflow uses the Azure login action and requires OpenID Conn
     - AZURE_CLIENT_ID
     - AZURE_TENANT_ID
     - AZURE_SUBSCRIPTION_ID
-4. Create a workflow file using GitHub secrets (see sample workflow YAML file in this repo)
+4. Create a workflow file using GitHub secrets
+    - See sample [nginxGithubActions.yml](.github/workflows/nginxGithubActions.yml) in this repo
 
 ### Requirement #3 - Azure PowerShell Access to Modify GitHub Repository
 
-The Azure Function runtime uses PowerShell and updates the NGINX configuration files in the repo. Git actions include clone, pull, add, and commit. Secure communication is accomplished with a GitHub access token retrieved from an Azure Key Vault secret. See [GitHub Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and [Azure Key Vault Secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli) for details. Here's a quick walk-through.
+The Azure Function runtime uses PowerShell during autoscale events to update the NGINX configuration files in the repo. Git actions include clone, pull, add, and commit. See [GitHub Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for details. Here's a quick walk-through.
 
 1. In your GitHub profile settings, create a [fine-grained GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token)
     - Name of token, expiration, Resource Owner
@@ -71,12 +72,16 @@ The Azure Function runtime uses PowerShell and updates the NGINX configuration f
     - Commit statuses = Read and write
     - Contents = Read and write
     - Metadata = Read-only
-4. Generate token and copy the value
+4. Click **Generate token** and copy the value
+
+Secure communication is accomplished by PowerShell retrieving the GitHub access token from a secret in Azure Key Vault. See [Azure Key Vault Secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli) for details. Here's a quick walk-through.
+
 5. In your Azure subscription, [create an Azure Key Vault and secret](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli)
     - secret value = GitHub access token (copied from step 4)
-6. Copy the names of the following Azure items:
-    - Key Vault name and Key Vault secret name
-    - Save for later
+6. Copy the "names" of the following Azure items:
+    - Key Vault Resource Group
+    - Key Vault
+    - Key Vault secret
 
 ## Day 1 Infrastructure
 
