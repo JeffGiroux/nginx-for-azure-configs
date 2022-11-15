@@ -40,7 +40,7 @@ You will store and modify NGINX configurations in a GitHub repo. The easiest way
 2. Choose an Owner and Repository Name for the new repo
 3. Create fork
 4. Your web browser will automatically navigate to the new repo
-5. Copy the URL for the repo by hitting the green **Code** button (ex. https://github.com/MyOrg123XYZ/myAppConfigs.git)
+5. Copy the URL for the repo by hitting the green **Code** button (ex. `https://github.com/MyOrg123XYZ/myAppConfigs.git`)
     - Save URL for later
 
 ### Requirement #2 - GitHub Access to Modify Azure Environment
@@ -50,8 +50,8 @@ The GitHub Actions workflow uses the Azure login action and requires OpenID Conn
 1. [Create an Azure Active Directory application and service principal](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#create-an-azure-active-directory-application-and-service-principal) with "Contributor" access to your Azure subscription
     - Copy the values for clientId, subscriptionId, and tenantId
 2. [Add federated credentials](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#add-federated-credentials) for the NGINX configuration repo
-    - Your GitHub organization/username (ex. MyOrg123XYZ)
-    - Your NGINX configuration repo name (ex. myAppConfigs)
+    - Your GitHub organization/username (ex. `MyOrg123XYZ`)
+    - Your NGINX configuration repo name (ex. `myAppConfigs`)
     - Branch (ex. main)
 3. [Create GitHub secrets](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Cwindows#create-github-secrets) in the NGINX configuration repo using values from the Azure Active Directory application (copied from step 1)
     - AZURE_CLIENT_ID
