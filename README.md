@@ -17,7 +17,7 @@
 
 ## Introduction
 
-This repo contains NGINX configuration files for a sample application. The sample NGINX configuration repo goes hand in hand with the deployment repo ["F5 NGINX for Azure Deployment with Demo Application in Multiple Regions"](https://github.com/f5devcentral/f5-digital-customer-engagement-center/tree/main/solutions/delivery/application_delivery_controller/nginx/nginx-for-azure) in which all the infrastructure components are deployed in a "Day 1" concept. The NGINX configurations are managed in a "Day 2" concept.
+This repo contains NGINX configuration files for a sample application. The sample NGINX configuration repo goes hand in hand with the deployment repo ["F5 NGINX for Azure Deployment with Demo Application in Multiple Regions"](https://github.com/JeffGiroux/nginx-for-azure) in which all the infrastructure components are deployed in a "Day 1" concept. The NGINX configurations are managed in a "Day 2" concept.
 
 ```
 └── configs
@@ -28,7 +28,7 @@ This repo contains NGINX configuration files for a sample application. The sampl
         └── app1-west-vmss.conf
 ```
 
-**Note:** Refer to the deployment repo README section [CI/CD Pipeline NGINX Configurations](https://github.com/f5devcentral/f5-digital-customer-engagement-center/tree/main/solutions/delivery/application_delivery_controller/nginx/nginx-for-azure#cicd-pipeline-nginx-configurations) to learn how these files are used.
+**Note:** Refer to the deployment repo README section [CI/CD Pipeline NGINX Configurations](https://github.com/JeffGiroux/nginx-for-azure#cicd-pipeline-nginx-configurations) to learn how these files are used.
 
 ## Requirements
 
@@ -85,7 +85,7 @@ Secure communication is accomplished by PowerShell retrieving the GitHub access 
 
 ## Day 1 Infrastructure
 
-Refer to the deployment repo ["F5 NGINX for Azure Deployment with Demo Application in Multiple Regions"](https://github.com/f5devcentral/f5-digital-customer-engagement-center/tree/main/solutions/delivery/application_delivery_controller/nginx/nginx-for-azure) to deploy NGINX for Azure, a sample application in multiple regions, and the necessary Azure infrastructure components.
+Refer to the deployment repo ["F5 NGINX for Azure Deployment with Demo Application in Multiple Regions"](https://github.com/JeffGiroux/nginx-for-azure) to deploy NGINX for Azure, a sample application in multiple regions, and the necessary Azure infrastructure components.
 
 ## Day 2 NGINX Configurations
 
@@ -96,3 +96,5 @@ Terraform will create a GitHub actions workflow file after completing the "Day 1
 ```
 .github/workflows/nginxGithubActions.yml
 ```
+
+**Note:** Refer to the deployment repo README section [CI/CD Pipeline NGINX Configurations](https://github.com/JeffGiroux/nginx-for-azure#cicd-pipeline-nginx-configurations) for more info.
