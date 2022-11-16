@@ -89,7 +89,7 @@ Refer to the deployment repo ["F5 NGINX for Azure Deployment with Demo Applicati
 
 ## Day 2 NGINX Configurations
 
-Terraform will create a GitHub actions workflow file after completing the "Day 1" infrastructure deployment. The file is named 'nginxGithubActions.yml'. Add the GitHub actions workflow file to the sample NGINX configurations repo. Once the workflow file has been added to the sample NGINX configuration repo, modifications to the NGINX configuration files will result in a [GitHub Actions workflow to update NGINX for Azure](https://docs.nginx.com/nginx-for-azure/management/nginx-configuration/#nginx-configuration-automation-workflows).
+Terraform will create a GitHub actions workflow file after completing the "Day 1" infrastructure deployment. The file is named 'nginxGithubActions.yml'. Add the GitHub actions workflow file to the sample NGINX configurations repo. Once the workflow file has been added to the sample NGINX configuration repo, modifications to the NGINX configuration files will result in a [GitHub Actions workflow to update NGINX for Azure](https://docs.nginx.com/nginxaas/azure/management/nginx-configuration/#nginx-configuration-automation-workflows).
 
 **Note:** The workflow file needs to be placed into the following location:
 
